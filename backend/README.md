@@ -5,6 +5,7 @@ Express.js backend with MongoDB for the TaskFlow MEAN stack project.
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js (v16 or higher)
 - MongoDB (local or cloud)
 - npm or yarn
@@ -77,6 +78,7 @@ FRONTEND_URL=http://localhost:4200
 ## 📋 API Endpoints
 
 ### Authentication Routes (`/api/auth`)
+
 - `POST /register` - User registration
 - `POST /login` - User login
 - `GET /me` - Get current user (protected)
@@ -87,6 +89,7 @@ FRONTEND_URL=http://localhost:4200
 ### Protected Routes (Require Authentication)
 
 #### Users (`/api/users`)
+
 - `GET /` - Get all users
 - `GET /:id` - Get user by ID
 - `POST /` - Create new user
@@ -94,6 +97,7 @@ FRONTEND_URL=http://localhost:4200
 - `DELETE /:id` - Delete user
 
 #### Tasks (`/api/tasks`)
+
 - `GET /` - Get all tasks
 - `GET /:id` - Get task by ID
 - `POST /` - Create new task
@@ -101,6 +105,7 @@ FRONTEND_URL=http://localhost:4200
 - `DELETE /:id` - Delete task
 
 #### Products (`/api/products`)
+
 - `GET /` - Get all products
 - `GET /:id` - Get product by ID
 - `POST /` - Create new product
@@ -108,10 +113,12 @@ FRONTEND_URL=http://localhost:4200
 - `DELETE /:id` - Delete product
 
 #### Settings (`/api/settings`)
+
 - `GET /` - Get user settings
 - `PUT /` - Update user settings
 
 ### Health Check
+
 - `GET /health` - Server health status
 
 ## 🔐 Authentication & Security
@@ -126,6 +133,7 @@ FRONTEND_URL=http://localhost:4200
 ## 🗄️ Database Schema
 
 ### User Model
+
 ```javascript
 {
   email: String (unique, required),
@@ -140,6 +148,7 @@ FRONTEND_URL=http://localhost:4200
 ```
 
 ### Task Model
+
 ```javascript
 {
   title: String (required),
@@ -154,6 +163,7 @@ FRONTEND_URL=http://localhost:4200
 ```
 
 ### Product Model
+
 ```javascript
 {
   name: String (required),
@@ -171,6 +181,7 @@ FRONTEND_URL=http://localhost:4200
 ## 🌱 Database Seeding
 
 The application automatically seeds a demo admin user on startup:
+
 - **Email**: demo@example.com
 - **Password**: password123
 - **Role**: admin
@@ -207,11 +218,13 @@ curl -X GET http://localhost:3000/api/users \
 ```
 
 ### Using the Frontend
+
 The frontend application provides test buttons in the dashboard to quickly test all API endpoints.
 
 ## 📦 Dependencies
 
 ### Production Dependencies
+
 - **express**: Web framework
 - **mongoose**: MongoDB ODM
 - **jsonwebtoken**: JWT authentication
@@ -225,11 +238,13 @@ The frontend application provides test buttons in the dashboard to quickly test 
 - **dotenv**: Environment variables
 
 ### Development Dependencies
+
 - **nodemon**: Auto-restart development server
 
 ## 🚨 Error Handling
 
 The API includes comprehensive error handling:
+
 - Mongoose validation errors
 - JWT authentication errors
 - File upload errors
